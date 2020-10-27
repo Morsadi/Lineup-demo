@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from './components/signup';
 import Setup from './components/setup';
 import Lineup from './components/lineUp';
+import About from './components/About';
 
 export default function App() {
   
@@ -24,7 +25,9 @@ export default function App() {
         <NavBar navScroll={navScroll} />
         <AnimatePresence>
           <Switch>
-            <Route path='/' exact component={Signup} />
+            <Route path='/' exact component={About} />
+
+            <Route path='/signup' component={Signup} />
 
             <Route path='/lineup' component={Lineup} />
 
