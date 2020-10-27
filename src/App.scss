@@ -396,6 +396,7 @@ h3 {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
+    transition: opacity .5s ease-in-out;
   }
   input::placeholder {
     color: #fff;

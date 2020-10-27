@@ -34,6 +34,7 @@ export default function Setup({ handleScroll }: types) {
   const [assigned_courts, setCourts] = useState<any>([]);
   const [reset, setReset] = useState<boolean>(false);
   const [loadingPlayers, setLoadingPlayers] = useState<boolean>(true);
+  const [access, setAcces] = useState<boolean>(false);
 
   // Refs
   const passInputRef = useRef<any>(null);
@@ -42,7 +43,8 @@ export default function Setup({ handleScroll }: types) {
   // on Mount
   useEffect(() => {
     // sync the players
-    call.players()
+    call
+      .players()
       .then((players: any) => {
         const newPlayers = Object.values(players) as string[];
         Object.values(players).map((player) => {
@@ -126,7 +128,8 @@ export default function Setup({ handleScroll }: types) {
   const save_lineup = () => {
     DB.lineup.set(lineup); // save the lineup to firebase
 
-    call.players()
+    call
+      .players()
       .then((data) => {
         // making sure not to override unseen signed up players
         // if new players exist
@@ -173,12 +176,21 @@ export default function Setup({ handleScroll }: types) {
   const checkPass = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
 
-    // shake when it's not a number
     setPassInput(val);
+
+    // if password is correct
+    if (val === admin_pass) {
+      passInputRef.current.classList.add('fade'); // hide input
+      setTimeout(() => {
+        setAcces(true);
+      }, 1200);
+    }
 
     // shake when the password is wrong
     if (val.length === 4 && val !== admin_pass) {
       passInputRef.current.style.animationName = 'shake';
+      setPassInput('');
+
     } else {
       passInputRef.current.style.animationName = '';
     }
@@ -260,7 +272,7 @@ export default function Setup({ handleScroll }: types) {
           />
         </motion.div>
       )}
-      {passInput !== admin_pass ? (
+      {!access ? (
         <div className='passBox'>
           <input
             onChange={checkPass}
