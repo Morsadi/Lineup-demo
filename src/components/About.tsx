@@ -25,7 +25,7 @@ export default function About() {
       exit='out'
       variants={pageVariants}
       transition={{ duration: 1 }}
-      className='page about'
+      className=' about'
       style={{ height: window.innerHeight }}
     >
       <h2>Mike's Group</h2>
@@ -39,7 +39,7 @@ export default function About() {
         velit consequuntur.
       </p>
 
-      <input className='join' type='button' value='JOIN' />
+      <input onClick={()=>window.open('https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjsgLdfqTFTtfKGBCHGSQvJRlvlvJzNnmXGzWCHbxrHhfRVSxglLMqNNwfCcnFMxDRLgKm', '_blank')} className='join' type='button' value='JOIN' />
       <input
         onClick={signupPath}
         className='play'

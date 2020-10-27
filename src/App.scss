@@ -69,9 +69,10 @@ h3 {
   text-align: center;
   color: #fff;
   width: 60%;
-  margin: 150px auto;
+  height: auto;
+  margin: 50px auto;
   h2 {
-    margin-bottom: 60px;
+    margin: 150px auto 60px;
   }
   p {
     font-size: 20px;
@@ -531,6 +532,9 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+  .about {
+    width: 95%;
+  }
   .setup {
     height: fit-content !important;
     display: flex;
