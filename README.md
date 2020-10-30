@@ -1,6 +1,27 @@
-# First1In 
+<h1 align="center">
+LineupNow
+</h1>
 
-First1In is a tool that was inspired by being part of a Tennis group that plays every Monday. With this tool, you can easily create lineups of your list of players. No need for emails anymore. All they have to do is go to the website, signup anytime, and wait for the lineup.
+<p align="center">
+Live Demo Preview: https://morsadiportfolio.netlify.com/.</br>
+  Login: 8765
+</p>
+
+<p align="center">
+  <img width="600" src="https://i.ibb.co/rvdVLjY/About.jpg">
+</p>
+<p align="center">
+  <img width="600" src="https://i.ibb.co/CHXnzgr/Signup.jpg">
+</p>
+<p align="center">
+  <img width="600" src="https://i.ibb.co/nnzbwCK/Lineup.jpg">
+</p>
+<p align="center">
+  <img width="600" src="https://i.ibb.co/c8B08Gr/Setup.jpg">
+</p>
+
+LineupNow is a tool that was inspired by being part of a Tennis group that plays every Monday. With this tool, you can easily create lineups of your list of players. No need for emails anymore. All they have to do is go to the website, signup anytime, and wait for the lineup.
+
 
 ### User Stories
 #### As a player:
