@@ -3,7 +3,7 @@ LineupNow
 </h1>
 
 <p align="center">
-Live Demo Preview: https://morsadiportfolio.netlify.com/.</br>
+Live Demo Preview: https://lineup-demo.netlify.app/</br>
   Login: 8765
 </p>
 
