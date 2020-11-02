@@ -25,12 +25,6 @@ export default function NavBar({ navScroll }: any) {
               ABOUT
             </Nav.Link>
             <Nav.Link
-              className={`NavLink ${location === '/signup' && 'active'}`}
-              href='/signup'
-            >
-              ABOUT
-            </Nav.Link>
-            <Nav.Link
               className='NavLink'
               href='/signup'
               style={{ opacity: location !== '/signup' ? '.4' : '1' }}
