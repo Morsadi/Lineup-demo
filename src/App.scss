@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// bootstrap
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+@import '../node_modules/bootstrap/scss/reboot';
+@import '../node_modules/bootstrap/scss/type';
+@import '../node_modules/bootstrap/scss/navbar';
+@import '../node_modules/bootstrap/scss/transitions';
+@import '../node_modules/bootstrap/scss/code';
+@import '../node_modules/bootstrap/scss/grid';
+@import '../node_modules/bootstrap/scss/mixins/_breakpoints';
+
 $lineUp: #4281a4;
 $signUp: #48a9a6;
 $Font: 'Montserrat', sans-serif;
@@ -225,7 +239,6 @@ h3 {
 
   .signup_input {
     @include textInput;
-  
   }
   .signup_input::placeholder {
     @include placeholder;
@@ -367,7 +380,7 @@ h3 {
       text-align: center;
       width: fit-content;
       max-width: 300px;
-      outline:0;
+      outline: 0;
       border-radius: 0;
     }
   }
@@ -531,7 +544,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@include media-breakpoint-down(md) {
   .about {
     width: 95%;
   }
@@ -567,15 +580,13 @@ footer {
 
   .collapseNavbar {
     height: 80px;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    right: 20px !important;
+    display: block;
     margin: 0 auto;
     width: 100% !important;
-    right: 0 !important;
-    justify-items: end;
   }
   .navbar-toggler {
+    position: absolute;
+    right: 20px;
     width: 55px;
     border-color: #fff !important;
     span {
@@ -586,15 +597,13 @@ footer {
     grid-row: 1;
   }
   .navbar-nav {
-    flex-direction: row !important;
+    margin: 10px auto;
+    text-align: center;
+    display: block;
 
     a {
       margin: 0 5px;
     }
-  }
-  .collapsed {
-    position: absolute;
-    right: 28px;
   }
   .courts {
     margin: 60px auto !important;
@@ -685,6 +694,7 @@ footer {
     transform: rotate(360deg);
   }
 }
+
 
 @keyframes sk-chase-dot-before {
   50% {

@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import NavBar from './components/navBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar  from './components/navBar';
 import Signup from './components/signup';
 import Setup from './components/setup';
 import Lineup from './components/lineUp';
