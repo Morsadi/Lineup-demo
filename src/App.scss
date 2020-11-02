@@ -69,11 +69,18 @@ h5 {
   top: 0;
   right: 0;
   z-index: 10;
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
   .NavLink {
     color: #fff !important;
     font-weight: 600;
+    opacity: 0.6;
   }
+  .active {
+    opacity: 1;
+  }
+}
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
 }
 h3 {
   font-size: 2em !important;
@@ -547,6 +554,13 @@ footer {
 @include media-breakpoint-down(md) {
   .about {
     width: 95%;
+    h2 {
+      margin-top: 100px;
+    }
+    p {
+      font-size: 16px;
+      padding: 0 30px;
+    }
   }
   .setup {
     height: fit-content !important;
@@ -566,45 +580,63 @@ footer {
     height: fit-content;
   }
   .signup {
-    margin: 120px auto !important;
+    margin: 100px auto !important;
+    width: 100%;
   }
   #homeLineUp .courts {
     width: 100%;
   }
   #bouncyBall {
     bottom: 140px !important;
+    position: static !important;
+  }
+  // signup input div
+  .signup div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    .signup_input{
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+  // signup whereAbout div
+  .signup div:nth-child(2) {
+    position: static !important;
+    margin-top: 100px;
   }
   .navBar {
-    width: 100%;
+    position: static;
+    width: 100% !important;
+    min-height: 65px;
+    text-align: center;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.96);
+    box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.96);
+    .NavLink {
+      color: #2b2b2b !important;
+      margin-top: 2px;
+    }
+    .active {
+      background: #eee;
+    }
+    .navbar-nav {
+      margin-top: 45px;
+    }
   }
-
   .collapseNavbar {
-    height: 80px;
-    display: block;
-    margin: 0 auto;
     width: 100% !important;
   }
   .navbar-toggler {
     position: absolute;
     right: 20px;
     width: 55px;
-    border-color: #fff !important;
-    span {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-    }
+    top: 10px;
+    // border-color: #fff !important;
+    // span {
+    //   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    // }
   }
-  #responsive-navbar-nav {
-    grid-row: 1;
-  }
-  .navbar-nav {
-    margin: 10px auto;
-    text-align: center;
-    display: block;
 
-    a {
-      margin: 0 5px;
-    }
-  }
   .courts {
     margin: 60px auto !important;
   }
@@ -694,7 +726,6 @@ footer {
     transform: rotate(360deg);
   }
 }
-
 
 @keyframes sk-chase-dot-before {
   50% {

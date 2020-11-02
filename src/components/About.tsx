@@ -17,7 +17,7 @@ export default function About() {
 
   const signupPath  = ()=>{
     window.location.href = '/signup';
-  }
+  };
   return (
     <motion.div
       initial='initial'
@@ -25,7 +25,7 @@ export default function About() {
       exit='out'
       variants={pageVariants}
       transition={{ duration: 1 }}
-      className=' about'
+      className='about'
       style={{ height: window.innerHeight }}
     >
       <h2>Mike's Group</h2>
