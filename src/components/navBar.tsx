@@ -8,30 +8,38 @@ export default function NavBar({ navScroll }: any) {
   const location = useLocation().pathname;
   return (
     <div id={navScroll >= 40 ? 'hideNav' : ''} className='navBar'>
-      <Navbar className='collapseNavbar' collapseOnSelect expand='lg' style={{width: 'min-content'}}>
+      <Navbar
+        className='collapseNavbar'
+        collapseOnSelect
+        expand='lg'
+        style={{ width: 'min-content' }}
+      >
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='mr-auto' />
           <Nav>
             <Nav.Link
-              className='NavLink'
+              className={`NavLink ${location === '/' && 'active'}`}
               href='/'
-              style={{ opacity: location !== '/' ? '.4' : '1' }}
+            >
+              ABOUT
+            </Nav.Link>
+            <Nav.Link
+              className={`NavLink ${location === '/signup' && 'active'}`}
+              href='/signup'
             >
               SIGNUP
             </Nav.Link>
             <Nav.Link
-              className='NavLink'
+              className={`NavLink ${location === '/lineup' && 'active'}`}
               href='/lineup'
-              style={{ opacity: location !== '/lineup' ? '.4' : '1' }}
             >
               LINEUP
             </Nav.Link>
             <Nav.Link
-              className='NavLink'
+              className={`NavLink ${location === '/setup' && 'active'}`}
               eventKey={2}
               href='/setup'
-              style={{ opacity: location !== '/setup' ? '.4' : '1' }}
             >
               SETUP
             </Nav.Link>
