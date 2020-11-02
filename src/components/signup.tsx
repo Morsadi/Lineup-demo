@@ -274,7 +274,7 @@ export default function Signup() {
           className='signup_btn'
           type='submit'
           onClick={signup_player}
-          value='SIGNUP'
+          value='PLAY'
         />
       </div>
       {message ? (

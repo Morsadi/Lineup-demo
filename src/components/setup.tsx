@@ -190,7 +190,6 @@ export default function Setup({ handleScroll }: types) {
     if (val.length === 4 && val !== admin_pass) {
       passInputRef.current.style.animationName = 'shake';
       setPassInput('');
-
     } else {
       passInputRef.current.style.animationName = '';
     }
