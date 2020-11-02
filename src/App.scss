@@ -550,7 +550,14 @@ footer {
     transform: translate3d(4px, 0, 0);
   }
 }
+// breakpoint between small and medium
+@include media-breakpoint-between(sm, md) {
+  .signup div:nth-child(2) {
+    margin-top: 140px!important;
+  }
+}
 
+// breakpoint under medium
 @include media-breakpoint-down(md) {
   .about {
     width: 95%;
@@ -594,7 +601,7 @@ footer {
   .signup div:nth-child(1) {
     display: flex;
     flex-direction: column;
-    .signup_input{
+    .signup_input {
       width: 300px;
       margin: 0 auto;
     }
@@ -602,7 +609,7 @@ footer {
   // signup whereAbout div
   .signup div:nth-child(2) {
     position: static !important;
-    margin-top: 100px;
+    margin-top: 120px;
   }
   .navBar {
     position: static;
@@ -631,10 +638,6 @@ footer {
     right: 20px;
     width: 55px;
     top: 10px;
-    // border-color: #fff !important;
-    // span {
-    //   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-    // }
   }
 
   .courts {

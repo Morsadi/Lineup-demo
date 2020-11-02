@@ -285,7 +285,7 @@ export default function Signup() {
       <div
         style={{
           position: 'absolute',
-          width: window.innerWidth,
+          width: '100%',
           margin: '0 auto',
           bottom: '40px',
           left: '0',
