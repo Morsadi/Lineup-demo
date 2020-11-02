@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-use-before-define
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import NavBar from './components/navBar';
