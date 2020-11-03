@@ -23,11 +23,11 @@ Live Demo Preview: https://lineup-demo.netlify.app/</br>
 
 ## Intoduction
 
-LineupNow is a tool that was inspired by being part of multiple Tennis groups. It is supposed to help event organizers create lineups and arrange tennis games for their groups.
+LineupNow is a tool that was inspired by being part of multiple tennis groups. It is supposed to help event organizers create lineups and arrange tennis games for their groups.
 
 
 ### Problems to solve:
-- The event organizer has to send weekly invites to more than 50 people multiple times before the game day.
+- The event organizer has to send weekly invites to many people multiple times before the game day.
 - The event organizer can be bombarded with email replies, whether they are confirming, declining or asking questions.
 - The players could be confused if the organizer hasn't sent the weekly invites.
 - Sometimes players don't receive or can lose the weekly email.
@@ -38,7 +38,7 @@ LineupNow is a tool that was inspired by being part of multiple Tennis groups. I
 - The players can signup to the coming game on their own using this tool.
 - They can check the time, date, location, lineup and the assigned courts without having to email the organizer.
 - The organizer only has to reset the week (2 clicks), with a new date, time and location instead of drafting an invitation email.
-- Easy to use the tool from any device.
+- Easy to use from any device.
 
 
 ### User Stories
