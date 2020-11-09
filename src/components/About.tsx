@@ -15,9 +15,9 @@ export default function About() {
     },
   };
 
-  const signupPath  = ()=>{
+  const signupPath = () => {
     window.location.href = '/signup';
-  }
+  };
   return (
     <motion.div
       initial='initial'
@@ -28,24 +28,18 @@ export default function About() {
       className='page about'
       style={{ height: window.innerHeight }}
     >
-      <h2>Mike's Group</h2>
+      <h2>Group 22</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit
-        omnis quos commodi eaque accusamus odit ratione officia consectetur a,
-        eveniet neque asperiores expedita est veniam quo minus velit
-        consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Ut impedit omnis quos commodi eaque accusamus odit ratione officia
-        consectetur a, eveniet neque asperiores expedita est veniam quo minus
-        velit consequuntur.
+        This is mainly a social group, where we understand that we all have a
+        busy life, work and school or family to keep attention to, and we think
+        of tennis as one big way to relax and occupy our mind and body in
+        something totally different from our daily routine. With that said,
+        there is a vast variety of experience among our members, so do not worry
+        about your level. You will find people to play with. No problem.
       </p>
 
       <input className='join' type='button' value='JOIN' />
-      <input
-        onClick={signupPath}
-        className='play'
-        type='button'
-        value='PLAY'
-      />
+      <input onClick={signupPath} className='play' type='button' value='PLAY' />
     </motion.div>
   );
 }
