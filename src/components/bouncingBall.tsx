@@ -3,6 +3,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function Bouncy() {
+  const mobile = () => {
+    return window.innerWidth <= 768;
+  };
   const ballStyle = {
     background: '#fff',
     height: '20px',
@@ -13,19 +16,17 @@ export default function Bouncy() {
 
   const ballTransition = {
     y: {
-      duration: 1,
+      duration: mobile() ? .7: .7,
       yoyo: Infinity,
       ease: 'easeOut',
     },
     x: {
-      duration: 2.2,
+      duration: mobile() ? 1: 2,
       yoyo: Infinity,
       ease: 'linear',
     },
   };
-  const mobile = () => {
-    return window.innerWidth <= 768;
-  };
+ 
   return (
     <div
       id='bouncyBall'
